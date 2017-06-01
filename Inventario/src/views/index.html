@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <script>window.$ = window.jQuery = require('jquery');</script>
+    <link rel="stylesheet" href="../../node_modules/bulma/css/bulma.css">
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../node_modules/alertifyjs/build/css/alertify.min.css">
+    <link rel="stylesheet" href="../../node_modules/alertifyjs/build/css/themes/default.min.css">
+    <link rel="stylesheet" href="../css/app.css">
+    <link rel="stylesheet" href="../css/font-awesome-4.7.0/css/font-awesome.min.css">
+  </head>
+  <body class="is-unselectable">
+    <div class="columns cuerpo">
+      <div class="column is-3 izquierdo">
+        <div class="columns detalle-titulo">
+          <div class="column">
+            <h3><strong style="color:white;">Productos:</strong></h3>
+          </div>
+        </div>
+        <div class="columns detalle-venta">
+          <div class="column">
+            <table>
+              <thead>
+                <td>Cant. <span><i class="fa fa-compass" aria-hidden="true"></i></span></td>
+                <td>Producto</td>
+                <td>Precio</td>
+                <td>Total</td>
+              </thead>
+              <tbody>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="columns detalle-total">
+          <div class="column">
+            <h3><strong style="color:white;">Total: $<span>1000000.00</span></strong></h3>
+          </div>
+        </div>
+        <div class="columns detalle-opciones">
+          <div class="column">
+            <div class="gbtn-detalle-opciones"><button type="button" class="btn btn-success btn-lg btn-detalle-opciones" id="vender">Vender</button><button type="button" class="btn btn-warning btn-lg btn-detalle-opciones">Cancelar</button></div>
+          </div>
+        </div>
+      </div>
+      <div class="column columna derecho">
+        <div class="columns navegacion">
+          <div class="column">
+            <button type="button" class="btn btn-lg btn-success" id="opCrearProducto">Agregar Producto</button>
+          </div>
+        </div>
+        <div class="columns buscador">
+          <div class="column">
+            <input type="text" class="form-control col-md-12" id="ipt-buscador" placeholder="Ingresa el producto">
+          </div>
+        </div>
+        <div class="columns productos">
+          <div class="column contenedor-productos">
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <div class="modal crearProducto">
+    <div class="modal-background"></div>
+    <div class="modal-content modal-producto">
+      <h3 class="title-registrar-producto">Registrar producto:</h3>
+      <h3 class="title-editar-producto ocultar">Editar producto:</h3>
+
+      <div id="productoMensaje"></div>
+      <div id="productoDetalle"></div>
+      <div class="form-group">
+        <label for="cBarras">Código de barras</label>
+        <input type="text" class="form-control" id="cBarras" placeholder="Escribe el código de barras">
+      </div>
+      <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input type="text" class="form-control" id="nombre" placeholder="Escribe el nombre del producto">
+      </div>
+      <div class="form-group">
+        <label for="descripcion">Descripción</label>
+        <input type="text" class="form-control" id="descripcion" placeholder="Escribe una muy breve descripción del producto">
+      </div>
+      <div class="form-group">
+        <label for="cantidad">Cantidad</label>
+        <input type="text" class="form-control" id="cantidad" value="1">
+      </div>
+      <div class="form-group">
+        <label for="costo">Costo Unitario</label>
+        <input type="text" class="form-control" id="costo" placeholder="Costo unitario del producto">
+      </div>
+      <div class="form-group">
+        <label for="precio">Precio Unitario</label>
+        <input type="text" class="form-control" id="precio" placeholder="Precio unitario del producto">
+      </div>
+      <button type="button" class="btn btn-lg btn-success" id="crearProducto">Guardar</button>
+      <button type="button" class="btn btn-lg btn-success ocultar" id="editarProducto">Guardar Cambios</button>
+    </div>
+
+
+    <button class="modal-close" id="cerrarModalProducto"></button>
+  </div>
+  <div class="modal indicadorCarga">
+    <div class="modal-background"></div>
+    <div class="modal-content indicadorCargaContenido" style="background-color:none;">
+      <h3 style="color:white;">Cargando...</h3>
+      <div class="progress">
+        <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+          <span class="sr-only"></span>
+        </div>
+      </div>
+    </div>
+    <button class="modal-close"></button>
+  </div>
+
+  </body>
+<!--  <script src="../../node_modules/alertifyjs/build/alertify.min.js">
+
+</script>-->
+  <script>
+    // You can also require other files to run in this process
+    require('../renderers/main.js')
+  </script>
+</html>

@@ -1,0 +1,119 @@
+html, body{
+  height: 100vh;
+  overflow: hidden;
+  font-size: 17px;
+  font-family: sans-serif !important;
+  color: #363636 !important;
+}
+.cuerpo{
+  background-color: red;
+  height: 100%;
+}
+
+.columns{
+  padding:0 !important;
+  margin:0 !important;
+}
+.column{
+  padding:0 !important;
+  margin:0 !important;
+}
+.column > h3{
+  text-align: center;
+  margin: 15px;
+  color: white;
+}
+.detalle-titulo{
+  height: 8%;
+  background-color: #34495E;
+  border-bottom: 1px solid #283644;
+/*#283644*/
+}
+.detalle-venta{
+  height: 76%;
+  background-color: #F4F7F7;
+  border-bottom: 1px solid #283644;
+}
+.detalle-venta > .column{
+  padding: 5px !important;
+}
+.detalle-total{
+  height: 8%;
+  background-color: #5DA0A2;
+  border-bottom: 1px solid #283644;
+}
+.detalle-opciones{
+  height: 8%;
+  background-color: white;
+}
+.btn-detalle-opciones{
+  /*padding: 0 !important;
+  margin: 0 !important;
+  height: 100%;
+  /*width: 50%;*/
+  border: 0;
+  border-left: 1px solid #283644;
+  height: 100% !important;
+  width: 50% !important;
+  border-radius: 0 !important;
+  font-size: 17px;
+  color: white;
+}
+.gbtn-detalle-opciones{
+  height: 100%;
+  width: 100%;
+}
+.navegacion{
+  height: 8%;
+  background-color: #34495E;
+  border-bottom: 1px solid #283644;
+}
+.buscador{
+  height: 7%;
+  background-color: #AACFD0;
+  border-bottom: 1px solid #283644;
+}
+.buscador > .column{
+  padding: 7px !important;
+}
+#ipt-buscador{
+  height: 100%
+}
+
+
+.productos{
+  height: 85%;
+  background-color: #F4F7F7;
+
+}
+.productos > .column{
+  padding: 5px !important;
+  overflow: auto;
+}
+.producto{
+  margin-bottom: 5px !important;
+}
+.producto-cantidad-titulo{
+  margin-bottom: 0px !important;
+}
+.modal-producto{
+  padding: 15px !important;
+}
+.izquierdo{
+  border: 1px solid #283644;
+}
+.derecho{
+  border-bottom: 1px solid #283644;
+  border-top: 1px solid #283644;
+  border-right: 1px solid #283644;
+}
+
+.indicadorCargaContenido{
+  background-color: transparent;
+  box-shadow: none !important;
+  border: none;
+}
+
+.ocultar{
+  display: none;
+}
